@@ -152,6 +152,10 @@
             name:categorie,
             data:categorie =='剧情'?data:movie,
             type: 'scatter',
+            symbolSize: function (data) {
+                console.log(data[0]);
+                return Math.sqrt(data[0]) / 100;
+            },
             label: {
                 emphasis: {
                     show: true,
